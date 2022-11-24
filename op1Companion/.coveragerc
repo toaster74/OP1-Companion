@@ -1,0 +1,6 @@
+[run]
+source = op1Companion
+omit = 
+    tests/*
+    autoapp.py
+
