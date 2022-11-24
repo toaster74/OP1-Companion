@@ -1,0 +1,5 @@
+#!/bin/bash
+
+logger -t umount-mtp "unmounting $0 $1"
+#exec /usr/bin/umount -l $1
+echo "exec /usr/bin/fusermount -q -u $1" | at now

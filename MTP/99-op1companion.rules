@@ -1,0 +1,5 @@
+# OP-1 Teenage Engineering
+SUBSYSTEM=="usb", ENV{ID_MTP_DEVICE}="1", ATTR{configuration}=="MTP Config", ATTR{idVendor}=="2367", ATTR{idProduct}=="0102", ACTION=="add", RUN+="/usr/bin/sudo -u pi /home/pi/OP1-Companion/MTP/mount-mtp -device=$attr{busnum},$attr{devnum} /mnt/op1"
+
+SUBSYSTEM=="usb", ENV{ID_VENDOR_FROM_DATABASE}=="Teenage Engineering", ACTION=="remove", RUN+="/usr/bin/logger op1 removed"
+SUBSYSTEM=="usb", ENV{ID_VENDOR_FROM_DATABASE}=="Teenage Engineering", ACTION=="remove", RUN+="/usr/bin/sudo -u pi /home/pi/OP1-Companion/MTP/umount-mtp /mnt/op1"

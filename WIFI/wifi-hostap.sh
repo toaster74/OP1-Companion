@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # The script configures simultaneous AP and Managed Mode Wifi on Raspberry Pi Zero W (should also work on Raspberry Pi 3)
 # Licence: GPLv3
 # Author: Darko Lukic <lukicdarkoo@gmail.com>
@@ -78,8 +78,8 @@ AP_IP_BEGIN=`echo "${AP_IP}" | sed -e 's/\.[0-9]\{1,3\}$//g'`
 MAC_ADDRESS="$(cat /sys/class/net/wlan0/address)"
 
 # Install dependencies
-sudo apt -y update
-sudo apt -y upgrade
+#sudo apt -y update
+#sudo apt -y upgrade
 sudo apt -y install dnsmasq dhcpcd hostapd cron
 
 # Populate `/etc/udev/rules.d/70-persistent-net.rules`

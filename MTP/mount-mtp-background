@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#TEMPDIR=`mktemp -d`
+logger -t mount-mtp "REAL Mounting $0 device: $1 mount-point: $2 from user `whoami` on $TEMPDIR -> $2"
+sleep  1
+logger -t mount-mtp "REAL Mount now"
+/usr/bin/fusermount -q -u /mnt/op1
+#/usr/bin/jmtpfs -d $1 $2 2>&1 | logger -t mount-jmtpfs
+/usr/bin/jmtpfs -d $1 $2 2>&1 > /dev/null
