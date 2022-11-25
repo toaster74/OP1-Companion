@@ -13,6 +13,7 @@ COPY --from=node /usr/lib/ /usr/lib/
 RUN true
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY requirements requirements
+RUN apt install -y postgresql-devel
 RUN pip install --no-cache -r requirements/prod.txt
 
 COPY package.json ./
@@ -36,6 +37,7 @@ ENV PATH="/home/sid/.local/bin:${PATH}"
 
 COPY --from=builder --chown=sid:sid /app/op1companion/static /app/op1companion/static
 COPY requirements requirements
+RUN apt install -y postgresql-devel
 RUN pip install --no-cache --user -r requirements/prod.txt
 
 COPY supervisord.conf /etc/supervisor/supervisord.conf
