@@ -7,3 +7,4 @@ logger -t mount-mtp "REAL Mount now"
 /usr/bin/fusermount -q -u /mnt/op1
 #/usr/bin/jmtpfs -d $1 $2 2>&1 | logger -t mount-jmtpfs
 /usr/bin/jmtpfs -d $1 $2 2>&1 > /dev/null
+logger -t mount-mtp "REAL Mount mounted"

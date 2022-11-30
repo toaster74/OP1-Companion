@@ -1,4 +1,5 @@
 #!/bin/bash
 
+sudo mkdir /mnt/op1
 logger -t mount-mtp "Mounting $0 device: $1 mount-point: $2 from user `whoami` on $TEMPDIR -> $2"
 echo /home/pi/OP1-Companion/MTP/mount-mtp-background $1 $2 | at now
