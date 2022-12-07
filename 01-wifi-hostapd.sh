@@ -1,5 +1,5 @@
 #!/bin/bash
-
+exit
 [[ ! -f "./DATA/CLIENT_SSID" ]] && echo "default" > ./DATA/CLIENT_SSID
 [[ ! -f "./DATA/CLIENT_TKIP" ]] && echo "default" > ./DATA/CLIENT_TKIP
 CLIENT_SSID=`cat ./DATA/CLIENT_SSID`
