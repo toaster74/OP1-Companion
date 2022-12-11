@@ -15,4 +15,5 @@ OP1 Companion on a Raspberry Pi Zero W for the "missing functionalitites"(TM)
  - RaspAP on http://raspap.com; https://docs.raspap.com/ap-sta/#installation
 ```
 curl -sL https://install.raspap.com | bash -s -- -y --openvpn 0 --adblock 0
+# admin / secret
 ```
